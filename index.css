@@ -175,7 +175,8 @@ canvas {
     background-color: #1EFF00;
     animation: blink 0.4s infinite alternate;
     position: relative; /* Position the cursor relative to the console */
-    top: -18px;
+    top: -16px;
+    left: 0px;
 }
 
 @keyframes blink {
