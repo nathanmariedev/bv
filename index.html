@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Björn Veldstra</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/9c081b63df.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <!------------------Header------------>
+        <div id="header">
+            <div class="logo">
+                <img src="public/nike-99.svg" fill="#fff">
+            </div>
+            <div class="menu hidden">
+                <a href="#">Accueil</a>
+                <a href="#">A propos</a>
+                <a href="#">Réalisations</a>
+                <a href="#">Centres d'intérêts</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <!------------------Accueil------------>
+        <div id="home">
+            <div class="container">
+                <div class="text">
+                    <h1>BJÖRN VELDSTRA</h1>
+                    <h2>Etudiant en Génie Mécanique et Productique</h2>
+                </div>
+
+            </div>
+            <div class="scroll-down">
+                <button id="scroll-btn">Par ici!</button>
+            </div>
+        </div>
+    </div>
+        <!------------------A propos------------>
+
+        <div id="about" class="hidden">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="Images/Moi 1.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">A propos de moi</h1>
+                        <p class="about-description">Actuellement en troisième année de BUT GMP (Génie Mécanique et
+                            Productique) à l'IUT de Nantes, option CPDC (Conception et Production Durable et
+                            Citoyenne).
+                            Cette formation, d'une durée de trois ans, m'a également permis d'obtenir un contrat
+                            d'alternance de deux ans chez Modular Solutions Le Mans, une start-up spécialisée dans
+                            le
+                            domaine du bâtiment.
+                            Aujourd'hui, je suis déterminé à approfondir mes compétences et à devenir un acteur clé
+                            dans
+                            la mise en œuvre de solutions durables au sein de l'industrie.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('compétences')">Compétences</p>
+                            <p class="tab-links" onclick="opentab('expériences')">Expériences</p>
+                            <p class="tab-links" onclick="opentab('formations')">Formations</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="compétences">
+                            <ul>
+                                <li><span>CAO</span><br>Solidworks, Catia V5, Catia V6</li>
+                                <li><span>Informatique</span><br>Développement Web, Excel VBA</li>
+                                <li><span>Industrie</span><br>Machines-outils, Pilotage industriel</li>
+                                <li><span>Humanités</span><br>Certification Voltaire "affaires", Anglais niveau C1
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="expériences">
+                            <ul>
+                                <li><span>2022-Présent</span><br>Technicien en bureau d'études chez Modular
+                                    Solutions Le
+                                    Mans (72)</li>
+                                <li><span>2022</span><br>Stagiaire technicien en amélioration continue chez Wärtsilä
+                                    (17)</li>
+                                <li><span>2021-2022</span><br>Intérimaire responsable de buvette à La Beaujoire (44)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="formations">
+                            <ul>
+                                <li><span>2021-2024</span><br>IUT Campus La Fleuriaye, formation GMP</li>
+                                <li><span>2018-2021</span><br>Lycée Polyvalent Nicolas Appert, spécialités
+                                    Mathématiques
+                                    et Physique-Chimie</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-----------------realisations------------------>
+
+        <div id="reals" class="hidden">
+            <div class="container">
+                <h1 class="sub-title">Mes réalisations</h1>
+                <div class="réalisations-list">
+                    <div>
+                        <i class="fa-solid fa-laptop"></i>
+                        <h2>CAO</h2>
+                        <p>Mes projets réalisés sur Catia V6 et SolidWorks</p>
+                        <a href="#">En savoir plus</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Développement Web</h2>
+                        <p>La création de mon Portfolio</p>
+                        <a href="#">En savoir plus</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-industry"></i>
+                        <h2>Industrie</h2>
+                        <p>Mes projets industriels</p>
+                        <a href="#">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="index.mjs"></script>
+<script type="module">
+    import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
+
+    neonCursor({
+        el: document.getElementById('app'),
+        shaderPoints: 16,
+        curvePoints: 80,
+        curveLerp: 0.5,
+        radius1: 5,
+        radius2: 30,
+        velocityTreshold: 10,
+        sleepRadiusX: 100,
+        sleepRadiusY: 100,
+        sleepTimeCoefX: 0.0025,
+        sleepTimeCoefY: 0.0025
+    })
+
+    console.log('neon cursor is running')
+
+
+    // Obtenez une référence à l'élément canvas
+    var canvas = document.getElementsByTagName('canvas')[0];
+
+    // Fonction pour ajuster la position du canvas
+    function posY() {
+        // Utilisez window.scrollY pour obtenir la position verticale du scroll
+        var positionScroll = window.scrollY;
+
+        // Ajustez la position `top` du canvas en utilisant `positionScroll`
+        // Vous pouvez modifier cette logique pour obtenir l'effet désiré
+        // Par exemple, en soustrayant `positionScroll` de la position initiale
+        // pour faire remonter le canvas quand on scroll vers le bas
+        canvas.style.top = -positionScroll + 'px';
+    }
+
+    // Écoutez l'événement de scroll sur la fenêtre
+    window.addEventListener('scroll', posY);
+</script>
